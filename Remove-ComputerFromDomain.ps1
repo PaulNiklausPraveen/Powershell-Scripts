@@ -1,4 +1,4 @@
-#This PS script will remove Computer from domain and restarts it. After restart system will be in Workgroup
+#This PS script will remove Computer remotely from domain and restarts it. After restart system will be in Workgroup
 
 
 #Mention the domain name to join
