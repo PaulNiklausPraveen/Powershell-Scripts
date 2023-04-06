@@ -20,11 +20,21 @@ Scripting language: PowerShell is a powerful scripting language that allows user
 Remoting: PowerShell supports remote administration, which allows users to manage computers and servers from a central location.
 
 
+## Reference Links for PowerShell ##
+
+PowerShell Documentation - https://learn.microsoft.com/en-us/powershell/
+
 Install PowerShell on Windows, Linux, and macOS - https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.3
 
 PowerShell Gallery - https://www.powershellgallery.com/
 
 PowerShell Module - https://learn.microsoft.com/en-us/powershell/module/
+
+PowerShell 7  - https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.3
+
+Windows Terminal - https://learn.microsoft.com/en-us/windows/terminal/
+
+
 
 
 
