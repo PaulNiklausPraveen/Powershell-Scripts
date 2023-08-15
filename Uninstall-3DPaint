@@ -1,0 +1,49 @@
+if(!(Get-Item C:\logs -ErrorAction SilentlyContinue))
+{
+New-Item -Path C:\ -Name "Logs" -ItemType Directory -Force -ErrorAction SilentlyContinue
+$logfilelocation = 'c:\logs' 
+}
+else
+{ 
+$logfilelocation='c:\logs'
+}
+Set-Location "C:\Logs"
+$TodayDate= Get-Date -format "dd-MMM-yyyy HH:mm tt"
+$AppName = 'MS_Paint3d'
+$logfile="$logfilelocation\$appname.log"
+"`n`nTimeStamp:$TodayDate"  | out-file $logfile -Append
+Start-Transcript $logfile
+
+$AppName="Microsoft.MSPaint"
+
+ 
+
+Function Uninstall-MSPaint
+{
+"Uninstalling $AppName"
+Get-AppxPackage $AppName | Remove-AppxPackage -AllUsers
+If(!(Get-AppxPackage $AppName))
+{
+"$TodayDate : MS Paint was uninstalled successfully."
+ 
+}
+Else
+{
+"$TodayDate : Failed to uninstall the MS Paint"
+}
+}
+
+
+
+
+If((Get-AppxPackage $AppName))
+{
+"$TodayDate : Found $APPName in  $ENV:Computername. Unistalling $AppName"
+ Uninstall-MSPaint
+}
+Else
+{
+ "$TodayDate :$AppName was not found in $ENV:Computername. "
+ 
+}
+Stop-Transcript
